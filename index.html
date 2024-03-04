@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+    <script>
+        // Check if the referrer is from 000webhost
+        function redirectIfFrom000Webhost() {
+            var referrer = document.referrer;
+            if (referrer.includes("000webhostapp")) {
+                window.location.href = "https://www.bing.com";
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = function() {
+            redirectIfFrom000Webhost();
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected automatically, <a href="https://www.bing.com">click here</a>.</p>
+</body>
+</html>
